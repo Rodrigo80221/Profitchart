@@ -1,0 +1,42 @@
+input
+ Ativo(1);
+ MediaMovel(26);
+
+
+var
+
+  Resultado : float;
+  Resultado2 : float;
+  Resultado1300 : float;
+  Resultado1700 : float;
+
+  Distancia : float;
+
+
+begin
+
+ if (Time > 1700) then 
+ BEGIN
+
+   Resultado1700 := AvgTrueRange(420,0)[Time - 1700];
+   Resultado1300 := AvgTrueRange(120,0)[(Time - 1700) + 240];
+
+
+   Distancia := (Resultado1700 + Resultado1300) / 2 ;
+  
+   Resultado := ( ( ( Distancia / 5) * 2 ) / 6);
+
+   Resultado2 := Resultado;
+   //Resultado := ( Distancia * 2 * 100 / 3   );
+   //Resultado := ( (Distancia * 2 * 2) / 3  );
+
+   IF Resultado < 6 THEN Resultado := 6;
+
+ END
+ else  Resultado := 0;
+
+ PLOT (round(Resultado));
+
+end;
+
+
