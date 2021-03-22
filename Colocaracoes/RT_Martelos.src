@@ -1,0 +1,32 @@
+VAR
+
+  bMarteloDeAltaForte : BOOLEAN;
+  bMarteloDeBaixaForte : BOOLEAN;
+
+BEGIN
+
+  bMarteloDeAltaForte := FALSE;
+  bMarteloDeBaixaForte := FALSE;
+
+  // DEFINIÇÃO DOS MARTELOS
+  IF (FECHAMENTO > ABERTURA) AND (MINIMA[0] < MINIMA[1]) THEN bMarteloDeAltaForte := True;
+  IF (FECHAMENTO < ABERTURA) AND (MAXIMA[0] > MAXIMA[1]) THEN bMarteloDeBaixaForte := True;
+
+
+  PaintBar(CLPRETO);
+  
+
+   if  ((Time >= 0910) and (Time < 1201)) then
+   BEGIN
+     PaintBar(CLCINZA);
+
+     IF bMarteloDeAltaForte THEN PAINTBAR(CLVERDELIMAO);
+
+     IF bMarteloDeBaixaForte THEN PAINTBAR(CLVERMELHO);
+
+   END;
+
+
+END;
+
+

@@ -1,0 +1,87 @@
+var
+
+  tr : float;
+  Renko : integer;
+
+  Resultado : float;
+                      
+begin
+
+Resultado := 0;
+Renko := 0;
+
+   Resultado := AvgTrueRange(2700,1);
+
+   //----------------------------------------------------------------------
+
+   if (Resultado > 0) and (Resultado <= 10) then Renko := 2
+   else if (Resultado > 9) and (Resultado < 20) then Renko := 3
+   else if (Resultado > 19) and (Resultado < 30) then Renko := 4
+   else if (Resultado > 29) and (Resultado < 40) then Renko := 5
+   else if (Resultado > 39) and (Resultado < 50) then Renko := 6
+   else if (Resultado > 49) and (Resultado < 60) then Renko := 7
+   else if (Resultado > 59) and (Resultado < 70) then Renko := 8
+   else if (Resultado > 69) and (Resultado < 80) then Renko := 9
+   else if (Resultado > 79) and (Resultado < 90) then Renko := 10
+   else if (Resultado > 89) and (Resultado < 100) then Renko := 11
+   else if (Resultado > 99) and (Resultado < 110) then Renko := 12
+   else if (Resultado > 109) and (Resultado < 120) then Renko := 13
+   else if (Resultado > 119) and (Resultado < 130) then Renko := 14
+   else if (Resultado > 129) and (Resultado < 140) then Renko := 15
+   else if (Resultado > 139) and (Resultado < 150) then Renko := 16
+   else if (Resultado > 149) and (Resultado < 160) then Renko := 17
+   else if (Resultado > 159) and (Resultado < 170) then Renko := 18
+   else if (Resultado > 169) and (Resultado < 180) then Renko := 19
+   else if (Resultado > 179) and (Resultado < 190) then Renko := 20
+   else if (Resultado > 189) and (Resultado < 200) then Renko := 21
+
+   else if (Resultado > 199) and (Resultado < 210) then Renko := 22
+   else if (Resultado > 209) and (Resultado < 220) then Renko := 23
+   else if (Resultado > 219) and (Resultado < 230) then Renko := 24
+   else if (Resultado > 229) and (Resultado < 240) then Renko := 25
+   else if (Resultado > 239) and (Resultado < 250) then Renko := 26
+   else if (Resultado > 249) and (Resultado < 260) then Renko := 27
+   else if (Resultado > 259) and (Resultado < 270) then Renko := 28
+   else if (Resultado > 269) and (Resultado < 280) then Renko := 29
+   else if (Resultado > 279) and (Resultado < 290) then Renko := 30
+   else if (Resultado > 289) and (Resultado < 300) then Renko := 31
+   else if (Resultado > 299) and (Resultado < 310) then Renko := 32
+   else if (Resultado > 309) and (Resultado < 320) then Renko := 33
+   else if (Resultado > 319) and (Resultado < 330) then Renko := 34
+   else if (Resultado > 329) and (Resultado < 340) then Renko := 35
+   else if (Resultado > 339) and (Resultado < 350) then Renko := 36
+   else if (Resultado > 349) and (Resultado < 360) then Renko := 37
+   else if (Resultado > 359) and (Resultado < 370) then Renko := 38
+   else if (Resultado > 369) and (Resultado < 380) then Renko := 39
+   else if (Resultado > 379) and (Resultado < 390) then Renko := 40
+   else if (Resultado > 389) and (Resultado < 400) then Renko := 41
+  
+   else Renko := 0;
+
+ PLOT (Renko);
+end;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+var
+  Renko : integer;
+  Resultado : float;
+              
+begin
+
+  Resultado := 0;
+  Renko := 0;
+  
+  //Resultado :=  AvgTrueRange(1350,1);
+  Resultado :=  AvgTrueRange(270,1);
+  
+  if (Resultado < 1) then Renko := 2
+  else if (Resultado > 1) and (Resultado < 2) then Renko := 3
+  else if (Resultado > 2) and (Resultado < 3) then Renko := 4
+  else if (Resultado > 3) and (Resultado < 4) then Renko := 5
+  else if (Resultado > 4) and (Resultado < 5) then Renko := 6
+  else if (Resultado > 5) and (Resultado < 6) then Renko := 7
+  else if (Resultado > 6) and (Resultado < 7) then Renko := 8
+  else if (Resultado > 7) and (Resultado < 8) then Renko := 9
+  else if (Resultado > 8) and (Resultado < 9) then Renko := 10
+  else if (Resultado > 9) and (Resultado < 10) then Renko := 11
+  else if (Resultado > 10) and (Resultado < 11) then Renko := 12
+  else if (Resultado > 11) and (Resultado < 12) then Renko := 13
+  else if (Resultado > 12) and (Resultado < 13) then Renko := 14
+  else if (Resultado > 13) and (Resultado < 14) then Renko := 15
+  else if (Resultado > 14) and (Resultado < 15) then Renko := 16
+  else if (Resultado > 15) and (Resultado < 16) then Renko := 17
+  else if (Resultado > 16) and (Resultado < 17) then Renko := 18
+  else if (Resultado > 17) and (Resultado < 18) then Renko := 19
+  else if (Resultado > 18) and (Resultado < 19) then Renko := 20
+  else if (Resultado > 19) and (Resultado < 20) then Renko := 21
+  else if (Resultado > 20) and (Resultado < 21) then Renko := 22
+  else if (Resultado > 21) and (Resultado < 22) then Renko := 23
+  else if (Resultado > 22) and (Resultado < 23) then Renko := 24
+  else if (Resultado > 23) and (Resultado < 24) then Renko := 25
+  
+  else Renko := 0;
+
+  PLOT (Renko);
+
+ 
+end;
